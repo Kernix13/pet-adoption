@@ -1,0 +1,273 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Start top-section */
+/* circle colors: #D660FF, #6079FF */
+.top-section-wrapper {
+  // background-color: #001D37;
+  background-image: linear-gradient(to bottom right,
+        #001D37,
+        #1731c5,
+        #5d0879,
+        #001D37);
+  // background: radial-gradient(ellipse at top, #001D37, transparent),
+  //     radial-gradient(ellipse at bottom, #2f4ae4, transparent),
+  //     radial-gradient(ellipse at bottom, #001D37, #960bc4);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+}
+
+.top-section {
+  padding: 5rem 0;
+  margin: 0 auto;
+  max-width: 1066px;
+  color: white;
+}
+
+.top-section h1 {
+  font-size: 4rem;
+  line-height: 97.3%;
+  margin: 0;
+  // max-width: 525px; // is this an issue?
+  // z-index: 1000;
+  // position: relative;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  line-height: 169.3%;
+  margin: 1rem 0;
+  max-width: 435px;
+}
+
+.intro-btns {
+  margin-bottom: 4.5em;
+}
+
+.btn {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 97.3%;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  background-color: #475AFF;
+  border: 1px solid #475AFF;
+  transition: background-color 250ms ease-out, border 250ms ease-out, color 400ms ease-out;
+}
+
+.btn:hover {
+  background-color: #1121b6;
+  border: 1px solid #1121b6;
+}
+
+.utility-mr {
+  margin-right: 0.625rem;
+}
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid white;
+}
+.btn--outline:hover {
+  background-color: white;
+  border: 2px solid white;
+  color: #475AFF;
+}
+
+.intro-features {
+  display: grid;
+  gap: 1rem
+}
+
+@media screen and (min-width: 580px) {
+  .intro-features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 900px) {
+  .intro-features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.intro-feature {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  padding: 1.5rem;
+}
+
+.intro-feature h2 {
+  font-size: 1.5rem;
+  line-height: 97.3%;
+  margin: 2.5rem 0 0.5rem;
+}
+
+.intro-feature p {
+  font-size: 1.0625rem;
+  line-height: 151.8%;
+  margin: 0;
+}
+
+.icon-svg {
+  width: 48px;
+  height: 48px;
+}
+
+/* End top-section */
+
+/* Begin page-section */
+.page-section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+}
+
+.page-section-inner {
+  max-width: 1066px;
+  margin: 0 auto;
+}
+
+.page-section-title {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.pet-filter, .pet-filter button {
+  font-size: 1.125rem;
+  color: #9F9F9F;
+}
+
+.pet-filter button {
+  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pet-filter button:hover {
+  color: #6d6d6d;
+}
+
+.pet-filter .active, .pet-filter .active:hover {
+  color: #475AFF;
+  text-decoration: underline;
+}
+
+/* Pet card */
+.list-of-pets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  column-gap: 1.75rem;
+  row-gap: 1rem;
+}
+
+.pet-card {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 1px solid #f3f3f3;
+  overflow: hidden;
+}
+
+.pet-card-text {
+  padding: 1rem;
+}
+
+.pet-card-text h3 {
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 97.3%;
+  margin: 0;
+}
+
+.pet-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #626262;
+  margin: 0.875rem 0 0;
+}
+
+.pet-age {
+  font-size: 85%;
+  color: #A2A2A2;
+  line-height: 1.5;
+}
+
+.pet-card-photo {
+  order: 1;
+  grid-row: 1;
+}
+
+.pet-card-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  font-size: 0.875rem;
+  list-style: 97.3%;
+  color: #A6A6A6;
+  margin: 0;
+  padding: 0 0 2rem;
+}
+
+@media screen and (min-width: 600px) {
+
+  .pet-filter,
+  .pet-filter button {
+    font-size: 1.375rem;
+  }
+
+  .page-section {
+    padding: 8.125rem 1rem;
+  }
+
+  .page-section-title {
+    font-size: 5.25rem;
+  }
+
+  .top-section {
+    padding: 8.75rem 0;
+  }
+
+  .top-section h1 {
+    font-size: 6.25rem;
+  }
+
+  .intro-btns {
+    margin-bottom: 8em;
+  }
+
+  .list-of-pets {
+    row-gap: 1.75rem;
+  }
+
+  .pet-card-text {
+    padding: 1.5rem;
+  }
+
+  .pet-description {
+    font-size: 1rem;
+  }
+
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Center</title>
+  <link rel="icon" type="image/png" href="./images/Favicon.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="top-section-wrapper">
+    <div class="top-section">
+      <h1>Find Your New Bestie</h1>
+      <p class="intro-text">The most amazing list of adoptable pets at your fingertips. Updated fresh daily.</p>
+      <div class="intro-btns">
+        <a class="btn utility-mr" href="#view-pets">View Pets</a>
+        <a class="btn btn--outline" href="#">Manage Pets</a>
+      </div>
+
+      <div class="intro-features">
+        <div class="intro-feature">
+          <img src="./images/sun 1.svg" alt="" class="icon-svg">
+          <h2>Sunny Play</h2>
+          <p>Our center is located in beautiful Miami, and it&rsquo;s currently <span id="temp"></span>&deg;F at our pet
+            playground.</p>
+        </div>
+        <div class="intro-feature">
+          <img src="./images/emoji-kiss 1.svg" alt="" class="icon-svg">
+          <h2>Dedicated Staff</h2>
+          <p>Our center has over 70 volunteers who play with the pets four times daily.</p>
+        </div>
+        <div class="intro-feature">
+          <img src="./images/trophy 1.svg" alt="" class="icon-svg">
+          <h2>Voted #1</h2>
+          <p>For the last five years we&rsquo;ve consistently been voted the #1 pet adoption center in the state.</p>
+        </div>
+        <div class="intro-feature">
+          <img src="./images/moon-stars 1.svg" alt="" class="icon-svg">
+          <h2>Nightly Yoga</h2>
+          <p>Every night our staff leads a yoga session and the animals are free to roam around and relax around people.
+          </p>
+        </div><!-- last column -->
+      </div><!-- 4-col wrapper intro-features -->
+
+      <!-- <div class="circle circle-one"></div> -->
+      <!-- <div class="circle circle-two"></div> -->
+
+    </div><!-- top-section -->
+  </div><!-- top-section-wrapper -->
+
+  <div id="view-pets" class="page-section">
+    <div class="page-section-inner">
+      <h2 class="page-section-title">Meet Our Friends</h2>
+      <div class="pet-filter">
+        <p>Show me: <button class="active" data-filter="all">All Pets</button> <button data-filter="dog">Only
+            Dogs</button> <button data-filter="cat">Only Cats</button></p>
+      </div>
+
+      <div class="list-of-pets"></div>
+
+      <template id="pet-card-template">
+        <div class="pet-card">
+          <article class="pet-card-text">
+            <h3></h3>
+            <p class="pet-description"></p>
+            <p class="pet-age"></p>
+          </article>
+          <div class="pet-card-photo">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </template>
+
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2023 Fake Adoption Center. All rights reserved.</p>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+</html>
