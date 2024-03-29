@@ -19,7 +19,7 @@ getWeather();
 // Get pet data
 async function petsArea() {
   
-  const petsPromise = await fetch('https://hilarious-semifreddo-a002da.netlify.app/.netlify/functions/pets');
+  const petsPromise = await fetch('/.netlify/functions/pets');
   const petsData = await petsPromise.json();
 
   petsData.forEach(pet => {

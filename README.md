@@ -7,3 +7,4 @@ New project using the following tech:
 1. Netlify functions
 1. MongoDB - full CRUD
 1. JSON
+1. Environment Variables
